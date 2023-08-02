@@ -1,0 +1,5 @@
+FROM quay.io/toolbx-images/alpine-toolbox:edge
+
+RUN apk add jq curl curlie cosign github-cli caddy
+RUN apk add pnpm go rustup python 
+RUN curl https://nim-lang.org/choosenim/init.sh -sSf | sh
