@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containerfile: [Containerfile.alpine]
+        containerfile: [Containerfile.clicontainer-alpine]
         
     steps: 
       # Checkout push-to-registry action GitHub repository
