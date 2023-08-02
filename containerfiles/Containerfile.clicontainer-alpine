@@ -1,6 +1,5 @@
 FROM quay.io/toolbx-images/alpine-toolbox:edge
 
 RUN apk add jq curl curlie wget cosign github-cli caddy git openssh
-RUN apk add nodejs go rustup python3
+RUN apk add nodejs go nim rustup python3
 RUN wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.shrc" SHELL="$(which sh)" sh -
-RUN curl https://nim-lang.org/choosenim/init.sh -sSf | sh -s -- -y
