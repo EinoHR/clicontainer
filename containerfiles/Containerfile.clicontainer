@@ -6,6 +6,6 @@ RUN cd /tmp && git clone https://aur.archlinux.org/aura-bin.git && cd aura-bin &
 USER root
 RUN cd /tmp/aura-bin && pacman -U --noconfirm $(find ./ -name "aura-*-x86_64.pkg.*")
 
-RUN aura -Syu --noconfirm base-devel jq curl curlie wget cosign github-cli caddy
-RUN aura -A --noconfirm choosenim-bin
-RUN aura -S --noconfirm nodejs npm pnpm go rustup python
+RUN sudo aura -Syu --noconfirm base-devel jq curl curlie wget cosign github-cli caddy
+RUN sudo aura -A --noconfirm choosenim-bin
+RUN sudo aura -S --noconfirm nodejs npm pnpm go rustup python
