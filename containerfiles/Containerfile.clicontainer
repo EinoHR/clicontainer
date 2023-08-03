@@ -4,7 +4,7 @@ RUN useradd --no-create-home --shell=/bin/false build && usermod -L build && ech
 USER build
 RUN cd /tmp && git clone https://aur.archlinux.org/aura-bin.git && cd aura-bin && makepkg
 USER root
-RUN cd /tmp/aura-bin && pacman -U $(find ./ -name "aura-*-x86_64.pkg.*")
+RUN cd /tmp/aura-bin && sudo pacman -U $(find ./ -name "aura-*-x86_64.pkg.*")
 
 RUN aura -Syu base-devel jq curl curlie wget cosign github-cli caddy
 RUN aura -A choosenim-bin
