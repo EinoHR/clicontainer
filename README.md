@@ -1,5 +1,9 @@
 # clicontainer
 
-```
-distrobox create --name cli --image ghcr.io/einohr/clicontainer-alpine:latest
+```sh
+distrobox rm --force cli
+
+distrobox create --name cli --home ~/clicontainer --image ghcr.io/einohr/clicontainer:latest
+
+distrobox enter cli
 ```
