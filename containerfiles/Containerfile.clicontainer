@@ -1,6 +1,6 @@
 FROM quay.io/toolbx-images/archlinux-toolbox
 
-RUN cd /tmp && git clone https://aur.archlinux.org/aura-bin.git && cd aura-bin && makepkg && pacman -U $(find ./ -name "aura-*-x86_64.pkg.*")
+RUN cd /tmp && git clone https://aur.archlinux.org/aura-bin.git && cd aura-bin && sudo -u nobody makepkg && pacman -U $(find ./ -name "aura-*-x86_64.pkg.*")
 
 RUN aura -Syu base-devel jq curl curlie wget cosign github-cli caddy
 RUN aura -A choosenim-bin
