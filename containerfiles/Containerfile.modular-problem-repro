@@ -1,5 +1,3 @@
 FROM ghcr.io/ublue-os/silverblue-main:38
 
-RUN rpm-ostree install python3-pip libadwaita  && \
-    rpm-ostree override remove firefox firefox-langpacks
-    
+RUN rpm-ostree override remove firefox firefox-langpacks --install python3-pip libadwaita
