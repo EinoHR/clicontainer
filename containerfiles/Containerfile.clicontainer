@@ -11,4 +11,4 @@ RUN sudo aura -A --noconfirm choosenim-bin
 USER root
 
 RUN sudo aura -Syu --noconfirm base-devel jq curl curlie wget cosign github-cli caddy kitty-terminfo
-RUN sudo aura -S --noconfirm nodejs npm pnpm go rustup python
+RUN sudo aura -S --noconfirm nodejs npm pnpm go rustup python poetry
