@@ -19,7 +19,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containerfile: [Containerfile.clicontainer, Containerfile.modular-problem-repro]
+        containerfile: [Containerfile.clicontainer, Containerfile.nix-test]
         
     steps: 
       # Checkout push-to-registry action GitHub repository
